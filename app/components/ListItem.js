@@ -16,6 +16,7 @@ import fonts from "../config/fonts";
 import ListContentItem from "./ListContentItem";
 function ListItem({
   title,
+  titleColor,
   subTitle,
   image,
   IconComponent,
@@ -23,11 +24,12 @@ function ListItem({
   renderRightActions,
   chevron,
   card,
+  style
 }) {
   return (
     // <Swipeable renderRightActions={renderRightActions}>
     <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
-      <View style={styles.container}>
+      <View style={[styles.container, style]}>
         {IconComponent && IconComponent}
         {image && <Image style={styles.image} source={image} />}
         <View
@@ -36,7 +38,7 @@ function ListItem({
             { marginLeft: image || IconComponent ? 15 : 0 },
           ]}
         >
-          <Text style={styles.title} numberOfLines={1}>
+          <Text style={[styles.title,{color:titleColor}]} numberOfLines={1}>
             {title}
           </Text>
           {subTitle && (
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "#4d4d4d",
-    fontFamily: fonts.medium,
+    fontFamily: fonts.glight,
     fontSize: 16,
   },
 });

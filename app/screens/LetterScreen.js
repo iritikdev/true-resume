@@ -61,8 +61,9 @@ function LetterScreen({ navigation }) {
             >
               <Heading
                 style={{
-                  fontFamily: fonts.bold,
-                  fontSize: 18,
+                  fontFamily: fonts.gbold,
+                  fontSize: 22,
+                  color:colors.coaldark
                 }}
               >
                 Letter according to your needs
@@ -83,7 +84,7 @@ function LetterScreen({ navigation }) {
                 <Icon
                   name={item.icon.name}
                   backgroundColor={item.icon.backgroundColor}
-                  iconColor={colors.danger}
+                  iconColor={colors.primary}
                 />
               }
               onPress={() => navigation.navigate(item.targetScreen)}

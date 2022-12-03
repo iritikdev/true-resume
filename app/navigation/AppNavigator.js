@@ -24,7 +24,7 @@ const AppNavigator = () => (
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         height: 70,
-        backgroundColor: "#fff",
+        backgroundColor: colors.coaldark,
       },
     }}
   >

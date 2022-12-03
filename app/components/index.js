@@ -6,8 +6,10 @@ import ListItem from "./ListItem";
 import ListItemSeparator from "./ListItemSeparator";
 import Screen from "./Screen";
 import AppTextInput from "../components/AppTextInput";
+import DynamicHeader from "./DynamicHeader";
 
 export {
+  DynamicHeader,
   AppText,
   Button,
   Heading,

@@ -8,22 +8,37 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 
-import { AppText, Button } from "../components";
+import { AppText, Button, Heading } from "../components";
+import Logo from "../components/Logo";
+import colors from "../config/colors";
 import fonts from "../config/fonts";
 
 function WelcomeScreen({ navigation }) {
   return (
-    <ImageBackground
-      blurRadius={5}
-      style={styles.background}
-      source={require("../assets/d1.jpg")}
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: colors.primary,
+      }}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/logo.png")} />
+        <Logo/>
+      </View>
+      <View style={styles.introductionContainer}>
+        <AppText style={styles.title}>ONLINE RESUME BUILDER</AppText>
+        <Heading style={styles.subTitle}>
+          Only 2% of resumes make it past the first round. Be in the top 2%
+        </Heading>
+        <AppText style={styles.para}>
+          Use professional field-tested resume templates that follow the exact
+          ‘resume rules’ employers look for. Easy to use and done within minutes
+          - try now for free!
+        </AppText>
       </View>
       <View style={styles.buttonsContainer}>
         <Button
-          shadow={0}
+          shadow={1}
+          color={colors.coaldark}
           title="Register"
           onPress={() => navigation.navigate("Register")}
         />
@@ -32,39 +47,43 @@ function WelcomeScreen({ navigation }) {
           <Text style={styles.skipButton}>Already have an account? Login</Text>
         </TouchableWithoutFeedback>
       </View>
-    </ImageBackground>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    justifyContent: "flex-end",
-    alignItems: "center",
-  },
-  buttonsContainer: {
-    padding: 20,
-    width: "100%",
-  },
-  logo: {
-    width: 300,
-    height: 300,
-  },
   logoContainer: {
-    position: "absolute",
-    top: 50,
-    alignItems: "center",
+    paddingTop: 100,
+    flex: 2,
+    
   },
-  tagline: {
-    fontSize: 25,
-    fontWeight: "600",
-    paddingVertical: 20,
+  introductionContainer: {
+    flex: 6,
+    paddingTop:50,
+    alignItems: "center",
+    alignSelf: "center",
+    width: 320,
+  },
+  title: {
+    fontSize: 13,
+  },
+  subTitle: {
+    fontSize: 20,
+    textAlign: "center",
+  },
+  para: {
+    textAlign: "center",
+    fontSize: 14,
+  },
+  
+  buttonsContainer: {
+    flex: 2,
+    paddingHorizontal: 20,
+    justifyContent: "center",
+    alignItems: "center",
   },
   skipButton: {
-    marginTop: 10,
-    fontFamily: fonts.regular,
-    textAlign: "center",
-    textDecorationLine: "underline",
+    color: colors.light,
   },
 });
 

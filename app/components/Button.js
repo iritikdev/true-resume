@@ -7,7 +7,7 @@ import fonts from "../config/fonts";
 function AppButton({ title, onPress, color = "primary" }) {
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor: colors[color] }]}
+      style={[styles.button, {backgroundColor:color}]}
       onPress={onPress}
     >
       <Text style={styles.text}>{title}</Text>

@@ -41,6 +41,7 @@ const menuItems = [
     },
     // targetScreen: routes.MESSAGES,
   },
+  
   {
     title: "Terms and Conditions",
     icon: {
@@ -49,10 +50,11 @@ const menuItems = [
     },
     // targetScreen: routes.MESSAGES,
   },
+  
   {
-    title: "Rate the App",
+    title: "Privacy Policy",
     icon: {
-      name: "message",
+      name: "lock",
       backgroundColor: colors.accent,
     },
     // targetScreen: routes.MESSAGES,
@@ -66,9 +68,9 @@ const menuItems = [
     // targetScreen: routes.MESSAGES,
   },
   {
-    title: "Privacy Policy",
+    title: "Rate the App",
     icon: {
-      name: "lock",
+      name: "message",
       backgroundColor: colors.accent,
     },
     // targetScreen: routes.MESSAGES,
@@ -80,7 +82,11 @@ function AccountScreen({ navigation }) {
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
+        style = {{
+          backgroundColor:colors.coaldark
+        }}
           title={"Ritik Sharma"}
+          titleColor= {colors.light}
           subTitle={"iritikdev@gmail.com"}
           image={require("../assets/me.webp")}
         />
@@ -98,7 +104,7 @@ function AccountScreen({ navigation }) {
                 <Icon
                   name={item.icon.name}
                   backgroundColor={item.icon.backgroundColor}
-                  iconColor={colors.danger}
+                  iconColor={colors.primary}
                 />
               }
               // onPress={() => navigation.navigate(item.targetScreen)}
@@ -113,7 +119,7 @@ function AccountScreen({ navigation }) {
           <Icon
             name="information"
             backgroundColor={colors.accent}
-            iconColor={colors.danger}
+            iconColor={colors.primary}
           />
         }
       />
@@ -125,7 +131,7 @@ function AccountScreen({ navigation }) {
           <Icon
             name="logout"
             backgroundColor={colors.accent}
-            iconColor={colors.danger}
+            iconColor={colors.primary}
           />
         }
       />
@@ -139,7 +145,7 @@ const styles = StyleSheet.create({
   },
   container: {
     marginBottom: 10,
-    marginTop: 10,
+    // marginTop: 10,
   },
 });
 

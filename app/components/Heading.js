@@ -8,10 +8,11 @@ function Heading({ children, style }) {
 
 const styles = StyleSheet.create({
   heading: {
+    
     marginTop: 5,
     marginBottom: 5,
-    fontFamily: fonts.bold,
-    fontSize: 18,
+    fontFamily: fonts.gbold,
+    fontSize: 22,
   },
 });
 export default Heading;

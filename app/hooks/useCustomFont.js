@@ -7,6 +7,8 @@ const useCustomFont = () => {
     "Inter-Bold": require("../assets/fonts/Inter-Bold.ttf"),
     "Inter-SemiBold": require("../assets/fonts/Inter-SemiBold.ttf"),
     "Inter-Medium": require("../assets/fonts/Inter-Medium.ttf"),
+    "Gilroy-ExtraBold": require("../assets/fonts/Gilroy-ExtraBold.ttf"),
+    "Gilroy-Light": require("../assets/fonts/Gilroy-Light.ttf"),
   });
   return loaded;
 };

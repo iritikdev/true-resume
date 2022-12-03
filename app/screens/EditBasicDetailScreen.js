@@ -28,7 +28,7 @@ const validationSchema = Yup.object().shape({
     .label("Postal Code"),
 });
 
-function NewsScreen(props) {
+function EditBasicDetailsScreen(props) {
   return (
     <Screen style={styles.screen}>
       <ScrollView
@@ -157,4 +157,4 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
 });
-export default NewsScreen;
+export default EditBasicDetailsScreen;

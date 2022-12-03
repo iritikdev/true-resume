@@ -12,11 +12,7 @@ function EditSkillScreen(props) {
         showsVerticalScrollIndicator={false}
         style={{ marginBottom: 60 }}
       >
-        {/* <Heading>Basics</Heading> */}
-        <TextInputField placeholder={"skill"} icon="account" />
-        <TextInputField placeholder={"Skill level"} icon="email" />
-
-        <Button title={"Save Basic Info"} />
+        
       </ScrollView>
     </Screen>
   );

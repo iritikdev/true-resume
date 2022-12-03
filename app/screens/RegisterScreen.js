@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 import * as Yup from "yup";
 
 import { Screen } from "../components";
 import AppForm from "../components/AppForm";
 import AppFormField from "../components/AppFormField";
+import Logo from "../components/Logo";
 import SubmitButton from "../components/SubmitButton";
 import colors from "../config/colors";
 
@@ -17,7 +18,9 @@ const schema = Yup.object().shape({
 function RegisterScreen(props) {
   return (
     <Screen style={styles.screen}>
-      <Image style={styles.logo} source={require("../assets/logo-icon.png")} />
+      <View style = {{marginBottom:50}}>
+      <Logo tagColor = {colors.black} logoColor = {colors.coaldark}/>
+      </View>
       <AppForm
         initialValues={{ name: "", password: "", email: "" }}
         validationSchema={schema}

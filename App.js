@@ -7,6 +7,7 @@ import LoginScreen from "./app/screens/LoginScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import AuthNavigator from "./app/navigation/AuthNavigator";
+import EditSummaryScreen from "./app/screens/EditSummaryScreen"
 
 export default function App() {
   const user = true;
